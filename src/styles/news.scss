@@ -1,0 +1,69 @@
+.news-list {
+      overflow: hidden;
+      a {
+            text-decoration: none;
+            color: inherit;
+            .news-item {
+                  background: white;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 20px;
+                  padding: 20px;
+                  transition: all 0.2s ease-in-out;
+                  &:hover {
+                        box-shadow: 3px 3px 5px rgb(88, 88, 88);
+                        transform: rotateY(10deg);
+                  }
+                  .title-container {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        p {
+                              font-size: calc(13px + 0.5vh);
+                              margin-right: 20px;
+                              color: red;
+                              font-weight: bold;
+                        }
+                        img {
+                              max-width: 200px;
+                              max-height: auto;
+                        }
+                  }
+
+                  .description {
+                        p {
+                              color: rgb(0, 0, 66);
+                              font-size: calc(13px + 0.5vh);
+                              margin: 20px 0;
+                              span {
+                                    color: red;
+                                    font-weight: bold;
+                              }
+                        }
+                  }
+
+                  .provider-info {
+                        width: 100%;
+                        margin: 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .provider-detail {
+                              display: flex;
+                              justify-content: space-between;
+                              align-items: center;
+                              p {
+                                    font-size: calc(13px + 0.5vh);
+                              }
+                              img {
+                                    max-width: 20px;
+                                    max-height: auto;
+                                    margin-right: 10px;
+                              }
+                        }
+                  }
+            }
+      }
+}

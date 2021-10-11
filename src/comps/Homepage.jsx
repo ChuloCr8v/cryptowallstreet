@@ -58,8 +58,8 @@ const Homepage = () => {
            </div>
            <div className="top-crypto">
                 <h1>Top Crypto News </h1>
-                <Link className="more" to="/News">More Updates </Link>
                 <News simplified />
+                <Link className="more" to="/News">More Updates </Link>
            </div>
         </div>
     )

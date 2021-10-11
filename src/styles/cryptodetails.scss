@@ -1,0 +1,26 @@
+.crypto-details {
+      padding: 20px;
+      h1, h2 {
+            font-size: calc(20px + 0.5vh);
+            text-align: center;
+            color: rgb(0, 0, 66);
+            margin: 20px 0;
+      }
+      h2 {
+            font-size: calc(17px + 0.5vh);
+      }
+      p {
+            font-size: calc(10px + 0.5vh);
+            text-align: center;
+      }
+
+      select {
+            min-width: 200px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+      }
+      .stat-item {
+            display: flex;
+            justify-content: space-between;
+      }
+}
