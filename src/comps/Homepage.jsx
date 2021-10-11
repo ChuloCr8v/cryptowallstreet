@@ -17,49 +17,49 @@ const Homepage = () => {
     return (
         <div className="homepage">
         <>
-            <h1 className="headimg">Global Cryptocurrency Stats</h1>
-            <ol className="list">
+            <h1 className="heading">Global Cryptocurrency Stats</h1>
+            <ol className="cryptos-list">
                 <li className="item">
                     <h3 className="title">Total Cryptocurrencies</h3>
-                    <div className="content">
-                        {globalStats.total}
-                    </div>
+                    <p className="content">
+                        {millify(globalStats.total)}
+                    </p>
                 </li>
                 <li className="item">
                     <h3 className="title">Total Exchanges</h3>
-                    <div className="content">
+                    <p className="content">
                         {globalStats.totalExchanges}
-                    </div>
+                    </p>
                 </li>
                 <li className="item">
                     <h3 className="title">Total Market Cap</h3>
-                    <div className="content">
+                    <p className="content">
                         {millify(globalStats.totalMarketCap)}
-                    </div>
+                    </p>
                 </li>
                 <li className="item">
                     <h3 className="title">Total Markets</h3>
-                    <div className="content">
+                    <p className="content">
                         {millify(globalStats.totalMarkets)}
-                    </div>
+                    </p>
                 </li>
                 <li className="item">
                     <h3 className="title">Total 24hr Volume</h3>
-                    <div className="content">
+                    <p className="content">
                         {millify(globalStats.total24hVolume)}
-                    </div>
+                    </p>
                 </li>
             </ol>
             </>
            <div className="top-crypto">
-                <h1>Top 10 Cryptocurrencies </h1>
+                <h1 className="heading">Top 10 Cryptocurrencies </h1>
                 <Cryptocurrencies simplified />
                 <Link className="more" to="/Cryptocurrencies">More Coins... </Link>
            </div>
-           <div className="top-crypto">
-                <h1>Top Crypto News </h1>
+           <div className="top-crypto-news">
+                <h1 className="heading">Top Crypto News </h1>
                 <News simplified />
-                <Link className="more" to="/News">More Updates </Link>
+                <Link className="more" to="/News">More Updates... </Link>
            </div>
         </div>
     )

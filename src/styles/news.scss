@@ -10,7 +10,7 @@
                   justify-content: center;
                   align-items: center;
                   margin: 20px;
-                  padding: 20px;
+                  padding: 30px;
                   transition: all 0.2s ease-in-out;
                   &:hover {
                         box-shadow: 3px 3px 5px rgb(88, 88, 88);
@@ -21,7 +21,7 @@
                         justify-content: space-between;
                         align-items: center;
                         p {
-                              font-size: calc(13px + 0.5vh);
+                              font-size: calc(10px + 0.5vh);
                               margin-right: 20px;
                               color: red;
                               font-weight: bold;
@@ -35,7 +35,7 @@
                   .description {
                         p {
                               color: rgb(0, 0, 66);
-                              font-size: calc(13px + 0.5vh);
+                              font-size: calc(10px + 0.5vh);
                               margin: 20px 0;
                               span {
                                     color: red;
@@ -50,12 +50,12 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        .provider-detail {
+                        .provider-detail, .news-time {
                               display: flex;
                               justify-content: space-between;
                               align-items: center;
                               p {
-                                    font-size: calc(13px + 0.5vh);
+                                    font-size: calc(10px + 0.5vh);
                               }
                               img {
                                     max-width: 20px;

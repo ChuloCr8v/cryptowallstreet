@@ -1,32 +1,40 @@
 .homepage {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      h1 {
+      width: 100%;
+      overflow: hidden;
+   //   padding: 50px 0;
+      .heading {
             font-size: calc(20px + 0.5vh);
             text-align: center;
-            margin: 20px 0;
+            margin: 50px 0;
 
       }
 
-      ol {
+      .cryptos-list {
             list-style: none;
-            li {
-                  margin: 20px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            padding: 20px;
+            .item {
                   h3 {
-                        color: rgba(0, 0, 0, 0.452);
+                        color: rgba(0, 0, 0, 0.6);
                         margin: 10px 0;
+                        font-size: calc(10px + 0.5vh);
+                  }
+                  p {
+                        font-size: calc(20px + 0.5vh);
+                        color: red;
                   }
             }
       }
-      .top-crypto {
+      .top-crypto, .top-crypto-news {
+            margin-top: 100px;
             a {
                   text-decoration: none;
                   font-size: calc(15px + 0.5vh);
             }
             .more {
+                  font-size: calc(10px + 0.5vh);
                   float: right;
                   margin-right: 20px;
                   color: red;
@@ -34,5 +42,4 @@
                   margin-top: 20px;
             }
       }
-
 }

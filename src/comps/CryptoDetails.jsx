@@ -77,22 +77,24 @@ const CryptoDetails = () => {
     return (
         <div className="crypto-details">
           <h1>{cryptoDetails.name} ({cryptoDetails.slug}) Live Updates</h1>
-          <p>{cryptoDetails.name} price updates in USD, live statistics, market cap and supply. </p>
-          <select 
+          <h4>{cryptoDetails.name} price updates in USD, live statistics, market cap and supply. </h4>
+         {/* <select 
             className="select-timeperiod" 
             onChange={(value) => setTimeperiod(value)}>
                   {time.map((date) => 
                   <option key={date}>{date}</option>)} 
-          </select>
+          </select>*/} 
           <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name} />
           <div className="currency-stat">
             <h2>{cryptoDetails.name} Live Statics Update </h2>
-            <p>An overview of {cryptoDetails.name} live statistics </p>
+            <h4>An overview of {cryptoDetails.name} live statistics </h4>
             <div className="stat-list">
                   {stats.map((stat) => (
                         <div className="stat-item">
+                           <div className="stat-title">
                               <p>{stat.icon}</p>
                               <p>{stat.title}</p>
+                           </div>
                               <p>{stat.value}</p>
                         </div>
                    ))}
@@ -101,12 +103,14 @@ const CryptoDetails = () => {
           
           <div className="all-currency-stat">
             <h2>All Cryptocurrencies Live Statics Update </h2>
-            <p>An overview of all crypto live statistics </p>
+            <h4>An overview of all crypto live statistics </h4>
             <div className="stat-list">
                   {genericStats.map((stat) => (
                         <div className="stat-item">
+                           <div className="stat-title">
                               <p>{stat.icon}</p>
                               <p>{stat.title}</p>
+                           </div>
                               <p>{stat.value}</p>
                         </div>
                    ))}
