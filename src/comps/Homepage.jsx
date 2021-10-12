@@ -19,32 +19,33 @@ const Homepage = () => {
         <>
             <h1 className="heading">Global Cryptocurrency Stats</h1>
             <ol className="cryptos-list">
+            
                 <li className="item">
-                    <h3 className="title">Total Cryptocurrencies</h3>
+                    <h4 className="title">Total Cryptocurrencies</h4>
                     <p className="content">
-                        {millify(globalStats.total)}
+                        {millify(globalStats.total && globalStats.total)}
                     </p>
                 </li>
                 <li className="item">
-                    <h3 className="title">Total Exchanges</h3>
+                    <h4 className="title">Total Exchanges</h4>
                     <p className="content">
                         {globalStats.totalExchanges}
                     </p>
                 </li>
                 <li className="item">
-                    <h3 className="title">Total Market Cap</h3>
+                    <h4 className="title">Total Market Cap</h4>
                     <p className="content">
                         {millify(globalStats.totalMarketCap)}
                     </p>
                 </li>
                 <li className="item">
-                    <h3 className="title">Total Markets</h3>
+                    <h4 className="title">Total Markets</h4>
                     <p className="content">
                         {millify(globalStats.totalMarkets)}
                     </p>
                 </li>
                 <li className="item">
-                    <h3 className="title">Total 24hr Volume</h3>
+                    <h4 className="title">Total 24hr Volume</h4>
                     <p className="content">
                         {millify(globalStats.total24hVolume)}
                     </p>

@@ -3,7 +3,6 @@ import {useParams} from 'react-router-dom'
 import {millify} from 'millify'
 import HTMLReactParser from 'html-react-parser'
 import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCircleOutlined, StopOutlined, TrophyOutlined, CheckOutlined, NumberOutlined, ThunderboltOutlined } from '@ant-design/icons';
-import {Select} from 'antd'
 import {useGetCryptoDetailsQuery} from '../services/cryptoApi'
 import {useGetCryptoHistoryQuery} from '../services/cryptoApi'
 import LineChart from './LineChart.js'
@@ -83,54 +82,58 @@ const CryptoDetails = () => {
             onChange={(value) => setTimeperiod(value)}>
                   {time.map((date) => 
                   <option key={date}>{date}</option>)} 
-          </select>*/} 
           <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name} />
-          <div className="currency-stat">
-            <h2>{cryptoDetails.name} Live Statics Update </h2>
-            <h4>An overview of {cryptoDetails.name} live statistics </h4>
-            <div className="stat-list">
-                  {stats.map((stat) => (
-                        <div className="stat-item">
-                           <div className="stat-title">
-                              <p>{stat.icon}</p>
-                              <p>{stat.title}</p>
-                           </div>
-                              <p>{stat.value}</p>
-                        </div>
-                   ))}
-            </div>
-          </div>
-          
-          <div className="all-currency-stat">
-            <h2>All Cryptocurrencies Live Statics Update </h2>
-            <h4>An overview of all crypto live statistics </h4>
-            <div className="stat-list">
-                  {genericStats.map((stat) => (
-                        <div className="stat-item">
-                           <div className="stat-title">
-                              <p>{stat.icon}</p>
-                              <p>{stat.title}</p>
-                           </div>
-                              <p>{stat.value}</p>
-                        </div>
-                   ))}
-            </div>
-          </div>
-          <div className="crypto-description">
-            <h1> What you should know about {cryptoDetails.name} </h1>
-            <p>
-            {HTMLReactParser(cryptoDetails.description)} 
-            </p>
-          </div>
-          <div className="more-info">
-            <h1>Get more information on {cryptoDetails.name} </h1>
-            {cryptoDetails.links.map((link) => (
-                  <div className="links">
-                      <p>{link.type}</p>
-                      <a href={link.url} target="_blank" rel="noreferrer" >{link.name}</a>
+          </select>*/} 
+          <div className="statistics-container">
+                <div className="currency-stat">
+                  <h2>{cryptoDetails.name} Live Update </h2>
+                  <h4>An overview of {cryptoDetails.name} live statistics </h4>
+                  <div className="stat-list">
+                        {stats.map((stat) => (
+                              <div className="stat-item">
+                                 <div className="stat-title">
+                                    <p>{stat.icon}</p>
+                                    <p>{stat.title}</p>
+                                 </div>
+                                    <p>{stat.value}</p>
+                              </div>
+                         ))}
                   </div>
-            ))} 
-          </div>
+                </div>
+                
+                <div className="all-currency-stat">
+                  <h2>All Cryptocurrencies Live Update </h2>
+                  <h4>An overview of all crypto live statistics </h4>
+                  <div className="stat-list">
+                        {genericStats.map((stat) => (
+                              <div className="stat-item">
+                                 <div className="stat-title">
+                                    <p>{stat.icon}</p>
+                                    <p>{stat.title}</p>
+                                 </div>
+                                    <p>{stat.value}</p>
+                              </div>
+                         ))}
+                  </div>
+                </div>
+           </div>
+          <div className="crypto-more-info">
+                <div className="crypto-description">
+                  <h1> What you should know about {cryptoDetails.name} </h1>
+                  <p>
+                  {HTMLReactParser(cryptoDetails.description)} 
+                  </p>
+                </div>
+                <div className="more-info">
+                  <h1>Get more information on {cryptoDetails.name} </h1>
+                  {cryptoDetails.links.map((link) => (
+                        <div className="links">
+                            <p>{link.type}</p>
+                            <a href={link.url} target="_blank" rel="noreferrer" >{link.name}</a>
+                        </div>
+                  ))} 
+                </div>
+            </div>
         </div>
     )
 }

@@ -40,6 +40,7 @@
             position: relative;
             transition: all 0.3s ease-in-out ;
             margin: 20px;
+
             &:hover {
                   background: rgba(255,215,0,0.3);
                   transform: translateY(-5px);
@@ -71,4 +72,18 @@
 
       }
 
+}
+
+@media (min-width: 688px) {
+
+      .crypto-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            li {
+                  min-width: 400px;
+            max-height: 400px; 
+            }
+      }
 }

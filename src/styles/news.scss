@@ -1,3 +1,10 @@
+.news-heading {
+      h1 {
+            font-size: calc(18px + 0.5vh);
+            text-align: center;
+            margin: 50px 0 20px 0;
+      }
+}
 .news-list {
       overflow: hidden;
       a {
@@ -19,26 +26,28 @@
                   .title-container {
                         display: flex;
                         justify-content: space-between;
-                        align-items: center;
+                        align-items: flex-start;
                         p {
-                              font-size: calc(10px + 0.5vh);
+                              font-size: calc(13px + 0.5vh);
                               margin-right: 20px;
-                              color: red;
+                              color: rgb(0, 0, 66) ;
                               font-weight: bold;
+                              text-align: justify ;
                         }
                         img {
                               max-width: 200px;
-                              max-height: auto;
+                              max-height: 100px;
                         }
                   }
 
                   .description {
                         p {
-                              color: rgb(0, 0, 66);
+                              color: red;
                               font-size: calc(10px + 0.5vh);
                               margin: 20px 0;
+                              text-align: justify;
                               span {
-                                    color: red;
+                                    color: rgb(0,0,66);
                                     font-weight: bold;
                               }
                         }
@@ -63,6 +72,23 @@
                                     margin-right: 10px;
                               }
                         }
+                  }
+            }
+      }
+}
+
+@media (min-width: 688px) {
+
+      .news-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            a {
+                  .news-item {
+                        max-width: 400px;
+                        min-height: 200px;
+
                   }
             }
       }

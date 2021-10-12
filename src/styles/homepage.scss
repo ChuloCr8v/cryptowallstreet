@@ -1,11 +1,11 @@
 .homepage {
       width: 100%;
       overflow: hidden;
-   //   padding: 50px 0;
+      //   padding: 50px 0;
       .heading {
             font-size: calc(20px + 0.5vh);
             text-align: center;
-            margin: 50px 0;
+            margin: 150px 0 50px 0;
 
       }
 
@@ -16,7 +16,7 @@
             grid-gap: 20px;
             padding: 20px;
             .item {
-                  h3 {
+                  h4 {
                         color: rgba(0, 0, 0, 0.6);
                         margin: 10px 0;
                         font-size: calc(10px + 0.5vh);
@@ -34,12 +34,12 @@
                   font-size: calc(15px + 0.5vh);
             }
             .more {
-                  font-size: calc(10px + 0.5vh);
+                  font-size: calc(15px + 0.5vh);
                   float: right;
                   margin-right: 20px;
                   color: red;
                   font-weight: bold;
-                  margin-top: 20px;
+                  margin: 20px;
             }
       }
 }

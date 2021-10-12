@@ -4,6 +4,7 @@ import { useGetCryptosQuery } from '../services/cryptoApi'
 import '../styles/news.scss'
 import moment from 'moment'
 import { Select, Col } from 'antd'
+import DemoImg from "../images/demo.jpg"
 
 const { Option } = Select
 
@@ -15,12 +16,13 @@ const News = ({ simplified }) => {
       })
       if (isFetching) return 'Loading...'
 
-const demoImg = "https://cdn.pixabay.com/photo/2017/01/25/12/31/bitcoin-2007769_1280.jpg"
-return (
-      <div>
-            {!simplified &&
-                  <div>
-                        {/*<select
+
+     
+      return (
+            <div>
+                  {!simplified &&
+                        <div>
+                              {/*<select
                               showSearch
                               optionFilterProp="children"
                               placeholder="Select a coin"
@@ -34,39 +36,44 @@ return (
                                     </>
                               )}
 
-                        </select> */} 
+                        </select> */}
+                        </div>
+                  }
+                  {!simplified &&
+                  <div className="news-heading">
+                    <h1>Top Cryptocurrency News Update </h1>
                   </div>
-            }
-            <div className="news-list">
-                  {cryptoNews?.value?.map((news, i) => (
-                        <a href={news.url} target="_blank" rel="noreferrer" className="news-item" key={i} >
-                              <div className="news-item">
-                                    <div className="title-container">
-                                          <p className="title">{news.name}</p>
+                  } 
+                  <div className="news-list">
+                        {cryptoNews?.value?.map((news, i) => (
+                              <a href={news.url} target="_blank" rel="noreferrer" className="news-item" key={i} >
+                                    <div className="news-item">
+                                          <div className="title-container">
+                                                <p className="title">{news.name}</p>
 
-                                          <img src={news?.image?.thumbnail?.contentUrl || demoImg} alt="crypto newa" />
-                                    </div>
+                                                <img src={news?.image?.thumbnail?.contentUrl || DemoImg} alt="crypto newa" />
+                                          </div>
 
-                                    <div className="description">
-                                          <p>
-                                                {news.description > 100 ? ` ${news.description.substring(0, 100)}` : news.description} <span>more... </span>
-                                          </p>
-                                    </div>
-                                    <div className="provider-info">
-                                          <div className="provider-detail">
-                                                <img src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImg} />
-                                                <p>{news.provider[0]?.name}</p>
+                                          <div className="description">
+                                                <p>
+                                                      {news.description > 100 ? ` ${news.description.substring(0, 100)}` : news.description} <span>more... </span>
+                                                </p>
                                           </div>
-                                          <div className="news-time">
-                                                <p>{moment(news.datePublished).startOf('ss').fromNow()}</p>
+                                          <div className="provider-info">
+                                                <div className="provider-detail">
+                                                      <img src={news.provider[0]?.image?.thumbnail?.contentUrl || DemoImg} />
+                                                      <p>{news.provider[0]?.name}</p>
+                                                </div>
+                                                <div className="news-time">
+                                                      <p>{moment(news.datePublished).startOf('ss').fromNow()}</p>
+                                                </div>
                                           </div>
                                     </div>
-                              </div>
-                        </a>
-                  ))}
+                              </a>
+                        ))}
+                  </div>
             </div>
-      </div>
-)
+      )
 }
 
 export default News

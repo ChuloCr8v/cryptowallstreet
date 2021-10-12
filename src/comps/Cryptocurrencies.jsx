@@ -31,9 +31,9 @@ const Cryptocurrencies = ({simplified}) => {
             </div>
         </div>
         } 
-            {cryptos?.map((crypto) => (
                 <ol className="crypto-list">
-                  <li>
+            {cryptos?.map((crypto, index) => (
+                  <li key={index} >
                         <Link to={ `/crypto/${crypto.id} `}>
                               <div className="title">
                                     <h1>{crypto.rank}. {crypto.name}</h1>
@@ -47,8 +47,8 @@ const Cryptocurrencies = ({simplified}) => {
                               </div>
                         </Link>
                   </li>
-                </ol>
             ))} 
+                </ol>
         </div>
     )
 }

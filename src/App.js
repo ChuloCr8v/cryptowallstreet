@@ -41,9 +41,9 @@ function App() {
       </div>
 
       <div className="footer">
-        <h2>Crypto Wallstreet</h2>
+        <h2><span>Crypto </span> Wallstreet</h2>
+            <a href="https://www.linkedin.com/in/bonaventure-nkematu-77b563148"> Designed by Dev. <span>Chex</span></a>
         <p>All rights reserved</p>
-        <Link to="/About">About</Link>
       </div>
     </div>
   );
