@@ -11,7 +11,7 @@ import '../styles/cryptodetails.scss'
 
 const CryptoDetails = () => {
       
-      const [timeperiod, setTimeperiod] = useState("7d")
+      const [timeperiod] = useState("7d")
       const {coinId} = useParams()
       const {data:coinHistory, isFetching} = useGetCryptoHistoryQuery({coinId, timeperiod})
       const {data, isFetching:isLoading } = useGetCryptoDetailsQuery(coinId)
@@ -20,7 +20,7 @@ const CryptoDetails = () => {
       
       const cryptoDetails = data?.data?.coin;
       
-      const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y']
+   //   const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y']
       
       const stats = [ 
             { 
@@ -82,8 +82,8 @@ const CryptoDetails = () => {
             onChange={(value) => setTimeperiod(value)}>
                   {time.map((date) => 
                   <option key={date}>{date}</option>)} 
-          <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name} />
           </select>*/} 
+          <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name} />
           <div className="statistics-container">
                 <div className="currency-stat">
                   <h2>{cryptoDetails.name} Live Update </h2>

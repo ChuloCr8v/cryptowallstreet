@@ -1,13 +1,12 @@
 import './styles/App.scss';
 
-import { Switch, Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Navbar from './comps/Navbar';
 import Homepage from './comps/Homepage';
 import Exchanges from './comps/Exchanges';
 import CryptoDetails from './comps/CryptoDetails';
 import Cryptocurrencies from './comps/Cryptocurrencies';
 import News from './comps/News';
-import About from './comps/About';
 
 
 

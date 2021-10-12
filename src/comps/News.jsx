@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import { useGetCryptosNewsQuery } from '../services/cryptoNewsApi'
-import { useGetCryptosQuery } from '../services/cryptoApi'
+//import { useGetCryptosQuery } from '../services/cryptoApi'
 import '../styles/news.scss'
 import moment from 'moment'
-import { Select, Col } from 'antd'
+//import { Select, Col } from 'antd'
 import DemoImg from "../images/demo.jpg"
 
-const { Option } = Select
+//const { Option } = Select
 
 const News = ({ simplified }) => {
 
-      const [newsCategory, setNewsCategory] = useState("Cryptocurrency")
+      const [newsCategory] = useState("Cryptocurrency")
       const { data: cryptoNews, isFetching } = useGetCryptosNewsQuery({
             newsCategory, count: simplified ? 6 : 50
       })
@@ -61,7 +61,7 @@ const News = ({ simplified }) => {
                                           </div>
                                           <div className="provider-info">
                                                 <div className="provider-detail">
-                                                      <img src={news.provider[0]?.image?.thumbnail?.contentUrl || DemoImg} />
+                                                      <img src={news.provider[0]?.image?.thumbnail?.contentUrl || DemoImg} alt="crypto news" />
                                                       <p>{news.provider[0]?.name}</p>
                                                 </div>
                                                 <div className="news-time">
