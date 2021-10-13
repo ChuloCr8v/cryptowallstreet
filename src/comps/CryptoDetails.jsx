@@ -7,6 +7,7 @@ import {useGetCryptoDetailsQuery} from '../services/cryptoApi'
 import {useGetCryptoHistoryQuery} from '../services/cryptoApi'
 import LineChart from './LineChart.js'
 import '../styles/cryptodetails.scss'
+import Loader from './Loader'
 
 
 const CryptoDetails = () => {
@@ -16,7 +17,7 @@ const CryptoDetails = () => {
       const {data:coinHistory, isFetching} = useGetCryptoHistoryQuery({coinId, timeperiod})
       const {data, isFetching:isLoading } = useGetCryptoDetailsQuery(coinId)
       
-      if(isFetching || isLoading) return 'Loading...'
+      if(isFetching || isLoading) return <Loader text={'Please hold on. Serving HOT 🔥 Crypto Soup 🍲'} />
       
       const cryptoDetails = data?.data?.coin;
       

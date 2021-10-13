@@ -1,6 +1,6 @@
 import '../styles/LineChart.scss' 
 import {Line} from 'react-chartjs-2'
-
+import Loader from './Loader'
 const LineChart = ({coinHistory, coinName, currentPrice }) => {
       
    const coinPrice = []
@@ -44,7 +44,7 @@ const LineChart = ({coinHistory, coinName, currentPrice }) => {
           <p> Current price: USD {currentPrice} </p>
           <p> Price Change: {coinHistory?.data?.change}%</p>
       </div>
-      <Line options={options} data={data} />
+      {coinHistory ? <Line options={options} data={data} /> : <Loader text={'Please refresh page to see chart 📊'} />} 
     </div>
     )
 }

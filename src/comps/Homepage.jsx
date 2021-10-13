@@ -5,13 +5,14 @@ import '../styles/homepage.scss'
 import { useGetCryptosQuery } from '../services/cryptoApi'
 import Cryptocurrencies from './Cryptocurrencies'
 import News from './News'
+import Loader from './Loader.jsx'
 
 const Homepage = () => {
 
     const { data, isFetching } = useGetCryptosQuery(10)
     const globalStats = data?.data?.stats;
 
-    if (isFetching) return 'Loading...'
+    if (isFetching) return <Loader text={'Please hold on. Serving HOT 🔥 Crypto Soup 🍲'} />
 
 
     return (
