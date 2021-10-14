@@ -1,3 +1,35 @@
+.news-title {
+      margin-top: 80px;
+      padding: 100px 20px;
+      background-image: url(../images/news-bg.jpg) ;
+      background-size: cover;
+      background-position: center;
+      &::before {
+            content: '';
+            height: 100%;
+            width: 100%;
+            background: rgb(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+      }
+      h1,
+      p {
+            color: gold;
+            font-size: calc(20px + 0.5vh);
+            text-align: center;
+            position: relative;
+            margin: auto ;
+            z-index: 20;
+      }
+      p {
+            font-size: calc(10px + 0.5vh);
+            color: white;
+            margin-top: 30px;
+      }
+}
+
 .news-heading {
       h1 {
             font-size: calc(18px + 0.5vh);
@@ -6,18 +38,23 @@
       }
 }
 .news-list {
+      position: relative;
+      z-index: 20;
       overflow: hidden;
+      margin-top: 50px;
       a {
             text-decoration: none;
             color: inherit;
             .news-item {
-                  background: white;
+                  background: rgba(0, 0, 0, 0.46);
+                  border: 2px gold solid;
                   display: flex;
                   flex-direction: column;
                   justify-content: center;
                   align-items: center;
-                  margin: 20px;
+                  margin: 40px 20px;
                   padding: 30px;
+                  box-shadow: 7px 10px 8px rgba(0, 0, 0);
                   transition: all 0.2s ease-in-out;
                   &:hover {
                         box-shadow: 3px 3px 5px rgb(88, 88, 88);
@@ -30,9 +67,9 @@
                         p {
                               font-size: calc(13px + 0.5vh);
                               margin-right: 20px;
-                              color: rgb(0, 0, 66) ;
+                              color: gold;
                               font-weight: bold;
-                              text-align: justify ;
+                              text-align: justify;
                         }
                         img {
                               max-width: 200px;
@@ -42,12 +79,12 @@
 
                   .description {
                         p {
-                              color: red;
+                              color: white;
                               font-size: calc(10px + 0.5vh);
                               margin: 20px 0;
                               text-align: justify;
                               span {
-                                    color: rgb(0,0,66);
+                                    color: gold;
                                     font-weight: bold;
                               }
                         }
@@ -59,12 +96,14 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        .provider-detail, .news-time {
+                        .provider-detail,
+                        .news-time {
                               display: flex;
                               justify-content: space-between;
                               align-items: center;
                               p {
                                     font-size: calc(10px + 0.5vh);
+                                    color: gold;
                               }
                               img {
                                     max-width: 20px;
@@ -78,17 +117,15 @@
 }
 
 @media (min-width: 688px) {
-
       .news-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            align-items: flex-start;
+            align-items: center;
             a {
                   .news-item {
                         max-width: 400px;
                         min-height: 200px;
-
                   }
             }
       }

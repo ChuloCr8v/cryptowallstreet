@@ -1,6 +1,12 @@
 .nav-container {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
   padding: 20px;
-  background: rgb(1, 0, 39);
+  background: rgb(26, 26, 26);
+  border-bottom: 2px solid gold;
+  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.555);
   .menu-icon-container {
     display: flex;
     justify-content: space-between;
@@ -44,7 +50,7 @@
         a {
           color: white;
           text-decoration: none;
-          font-size: calc(15px + 0.5vh);
+          font-size: calc(10px + 0.5vh);
           &:hover {
             color: gold;
           }

@@ -1,45 +1,195 @@
 .homepage {
       width: 100%;
       overflow: hidden;
-      //   padding: 50px 0;
-      .heading {
-            font-size: calc(20px + 0.5vh);
-            text-align: center;
-            margin: 150px 0 50px 0;
-
+      padding-bottom: 100px;
+      padding-top: 100px;
+      position: relative ;
+      .homepage-hero {
+            background-image: url(../images/homepage-heroImg.jpg) ;
+            background-size: cover;
+            background-position: center;
+            padding: 100px 50px;
+            &::before {
+                  content: '';
+                  height: 100%;
+                  width: 100%;
+                  background: rgb(0, 0, 0, 0.5);
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  z-index: 0;
+            }
+            h1 {
+                  font-size: calc(20px + 0.5vh);
+                  color: gold;
+            }
+            p {
+                  font-size: calc(13px + 0.5vh);
+                  color: white;
+                  margin-top: 10px;
+            }
+            h1,
+            p {
+                  position: relative;
+                  z-index: 20;
+                  text-align: center;
+            }
       }
 
+      .container {
+            overflow: hidden;
+            position: relative;
+      }
+      .heading-container {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .icon-container {
+                  height: 100px;
+                  width: 100px;
+                  padding: 20px;
+                  border: 2px gold solid;
+                  border-radius: 100%;
+                  margin-bottom: 30px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: relative;
+                  &::before, &::after {
+                        content: '';
+                        height: 100px;
+                        width: 100px;
+                        border: 4px gold solid;
+                        border-radius: 100%;
+                        z-index: 0;
+                        position: absolute ;
+                        filter: blur(80px);
+                  }
+                  &::after {
+                        filter: blur(10px);
+                  }
+                  .icon {
+                        color: gold;
+                        font-size: calc(60px + 0.5vh);
+                        position: relative;
+                        z-index: 20;
+                  }
+            }
+            .heading {
+                  font-size: calc(15px + 0.5vh);
+                  text-align: center;
+                  color: white;
+                  margin-bottom: 10px;
+                  position: relative;
+                  z-index: 20;
+                  span {
+                        color: gold;
+                  }
+            }
+            .subtitle {
+                  color: white;
+                  font-size: calc(10px + 0.5vh) ;
+                  text-align: center;
+                  position: relative;
+                  margin-bottom: 100px;
+                  font-weight: 100;
+                  z-index: 20;
+            }
+      }
       .cryptos-list {
             list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 20px;
-            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
             .item {
+                  background: rgba(0, 0, 0, 0.46);
+                  padding: 20px;
+                  min-width: 300px;
+                  border: 2px gold solid;
+                  margin: 20px;
+                  border-radius: 10px;
+                  box-shadow: 7px 8px 5px rgba(0, 0, 0, 0.66);
+                  transition: all 0.2s linear;
+                  &:hover {
+                        box-shadow: 3px 5px 8px rgb(255, 255, 255);
+                  }
                   h4 {
-                        color: rgba(0, 0, 0, 0.6);
+                        color: gold;
                         margin: 10px 0;
-                        font-size: calc(10px + 0.5vh);
+                        font-size: calc(13px + 0.5vh);
                   }
                   p {
                         font-size: calc(20px + 0.5vh);
-                        color: red;
+                        color: white;
                   }
             }
       }
-      .top-crypto, .top-crypto-news {
+      .top-crypto {
+            background-image: url(../images/top-crypto-bg.jpg);
+            background-size: cover;
+            background-position: left;
+            padding: 20px;
+            position: relative;
+            &::before {
+                  content: "";
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  background: rgb(0,0,0, 0.6) ;
+                  z-index: 0;
+            }
+      }
+      .top-crypto,
+      .top-crypto-news {
             margin-top: 100px;
             a {
                   text-decoration: none;
                   font-size: calc(15px + 0.5vh);
             }
-            .more {
-                  font-size: calc(15px + 0.5vh);
-                  float: right;
+            .link {
+                  display: flex;
+                  justify-content: flex-end;
                   margin-right: 20px;
-                  color: red;
+                  margin-top: 50px;
+            }
+            .more {
+                  background: transparent;
+                  border: 2px gold solid;
+                  padding: 10px;
+                  font-size: calc(15px + 0.5vh);
+                  color: gold;
                   font-weight: bold;
-                  margin: 20px;
+                  position: relative;
+                  overflow: hidden;
+                  z-index: 20;
+                  margin-bottom: 50px;
+                  &:hover {
+                        color: rgb(26, 26, 26);
+                        &::before {
+                              animation: fill 0.3s forwards;
+                        }
+                  }
+                  &::before {
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        background: gold;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        z-index: -10;
+                  }
+                  @keyframes fill {
+                        100% {
+                              width: 102%;
+                              height: 102%;
+                        }
+                  }
             }
       }
 }

@@ -1,53 +1,90 @@
+.cryptos-title {
+      margin-top: 100px;
+      padding: 100px 20px;
+      background-image: url(../images/homepage-heroImg.jpg) ;
+      background-size: cover;
+      background-position: center;
+      &::before {
+            content: '';
+            height: 100%;
+            width: 100%;
+            background: rgb(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+      }
+      h1,
+      p {
+            color: gold;
+            font-size: calc(20px + 0.5vh);
+            text-align: center;
+            position: relative;
+            margin: auto ;
+z-index: 20;
+      }
+      p {
+            font-size: calc(10px + 0.5vh);
+            color: white;
+            margin-top: 30px;
+      }
+}
+
+
 .searchbar {
       margin: 20px auto;
       margin-top: 100px;
       margin-bottom: 50px;
       max-width: calc(300px + 1vh);
       position: relative;
+      z-index: 20;
       &:hover {
             .search-icon {
-                  color: red;
+                  color: gold;
             }
       }
       input {
-            background: rgb(255,255,255, 0);
+            background: rgb(255, 255, 255, 0);
             min-width: 100%;
             padding: 4px 10px;
             border: none;
-            border: 2px #040185 solid;
+            border: 2px white solid;
             border-radius: 8px;
+            color: gold;
             &:hover,
             &:focus,
             &:active {
                   outline: none;
-                  border: 2px red solid;
+                  border: 2px gold solid;
             }
       }
       .search-icon {
             position: absolute;
             top: 5px;
             right: 10px;
-            color: #040185;
+            color: white;
       }
 }
+
+
 .crypto-list {
       list-style: none;
       li {
-            background: white;
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px gold solid;
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 3px 3px 8px 2px rgba(0,0,0,0.2);
+            box-shadow: 7px 10px 8px rgba(0, 0, 0);
             position: relative;
-            transition: all 0.3s ease-in-out ;
+            transition: all 0.3s ease-in-out;
             margin: 20px;
 
             &:hover {
-                  background: rgba(255,215,0,0.3);
                   transform: translateY(-5px);
             }
             a {
                   text-decoration: none;
-                  color: #07075a;
+                  color: gold;
             }
             img {
                   max-height: 50px;
@@ -56,7 +93,7 @@
             .title {
                   display: flex;
                   justify-content: space-between;
-                  align-items: center ;
+                  align-items: center;
                   h1 {
                         font-size: calc(18px + 0.5vh);
                   }
@@ -64,18 +101,15 @@
             .details {
                   padding: 20px;
                   p {
-                        color: red;
+                        color: white;
                         font-size: calc(13px + 0.5vh);
                         margin-bottom: 5px;
                   }
             }
-
       }
-
 }
 
 @media (min-width: 688px) {
-
       .crypto-list {
             display: flex;
             flex-wrap: wrap;
@@ -83,7 +117,7 @@
             align-items: center;
             li {
                   min-width: 400px;
-            max-height: 400px; 
+                  max-height: 400px;
             }
       }
 }

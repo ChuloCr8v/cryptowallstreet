@@ -1,14 +1,42 @@
 .crypto-details {
-      padding: 0 20px;
+      .crypto-details-hero {
+            background-image: url(../images/headerbg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 50px;
+            position: relative;
+            margin-top: 50px;
+            width: 100%;
+            h1 {
+                  margin-top: 80px;
+                    background: rgb(0,0,0, 0.5);
+            padding: 20px; 
+            }
+            &::before {
+                  content: '';
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  background: rgba(0,0,0,0.455);
+            }
+      }
       h1, h2, h4 {
             font-size: calc(20px + 0.5vh);
             text-align: center;
-            color: rgb(0, 0, 66);
+            color: gold;
             margin-top: 100px;
             margin-bottom: 20px;
+            position: relative;
+            z-index: 20;
       }
 
       h1 {
+
+            position: relative;
+            z-index: 20;
             margin-top: 100px;
       }
 
@@ -16,14 +44,15 @@
             font-size: calc(17px + 0.5vh);
       }
       h4 {
-            font-size: calc(10px + 0.5vh);
+            font-size: calc(13px + 0.5vh);
             font-weight: 100;
             margin: 20px 0 50px 0;
-            color: red;
+            color: white;
       }
       p {
-            font-size: calc(10px + 0.5vh);
+            font-size: calc(13px + 0.5vh);
             text-align: center;
+            color: white;
       }
 
       select {
@@ -32,6 +61,7 @@
             margin-bottom: 20px;
       }
       .currency-stat, .all-currency-stat {
+            padding: 20px;
             .stat-item {
                   display: flex;
                   align-items: center;
@@ -50,10 +80,11 @@
       }
 
       .crypto-description {
+            padding: 20px;
             h3 {
                   margin: 20px 0;
                   font-size: calc(15px + 0.5vh);
-                  color: red;
+                  color: gold;
             }
             p {
                   text-align: justify;

@@ -6,7 +6,7 @@ const Loader = ({text}) => {
             <div className="moving-bar">
             </div>
       </div>
-      <p>{text} </p>
+      <p>{text}</p>
     </div>
     )
 }

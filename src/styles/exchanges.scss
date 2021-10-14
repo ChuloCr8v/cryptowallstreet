@@ -1,55 +1,60 @@
 .exchanges {
-  min-width: 100%;
-  .exchange-header {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-    padding: 10px 5px;
-    gap: 20px;
-    border-bottom: 2px #8080807e solid;
-    h5 {
-      color: red;
-      font-size: calc(13px + 0.5vh);
-    }
-  }
-  .exchange-item {
-    &:nth-child(odd) {
-      background: rgba(128, 128, 128, 0.2);
-    }
-    li {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      align-items: center;
-      padding: 10px;
-      gap: 25px;
-      p {
-        font-size: calc(13px + 0.5vh);
+      min-width: 100%;
+      margin-top: 120px;
+      .exchange-header {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: center;
+            padding: 10px 5px;
+            gap: 20px;
+            border-top: 2px #8080807e solid;
+            border-bottom: 2px #8080807e solid;
+            h5 {
+                  color: gold;
+                  font-size: calc(13px + 0.5vh);
+            }
       }
-    }
-  }
-  .exchange-desc {
-    border-bottom: 1px solid #000;
-    border-top: 1px solid #000;
-    padding: 20px;
-    p {
-      text-align: justify;
-      color: red;
-      font-size: calc(13px + 0.5vh);
-      line-height: calc(26px + 0.5vh);
-      h2,
-      h1,
-      h3 {
-        color: rgb(0, 0, 66);
-        margin: 20px 0;
+      .exchange-item {
+            &:nth-child(odd) {
+                  //  background: white;
+            }
+            li {
+                  width: 100%;
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr 1fr;
+                  align-items: center;
+                  padding: 20px 10px;
+                  gap: 25px;
+                  border-bottom: 1px #ffd700 solid;
+                  p {
+                        font-size: calc(13px + 0.5vh);
+                        color: white;
+                  }
+            }
       }
-      a {
-        text-decoration: none;
-        color: rgb(0, 0, 66);
-        font-weight: bold;
-        font-style: italic;
+      .exchange-desc {
+            background: black ;
+            border-bottom: 1px solid gold;
+            border-top: 1px solid gold;
+            padding: 20px;
+            p {
+                  text-align: justify;
+                  color: white;
+                  font-size: calc(13px + 0.5vh);
+                  line-height: calc(26px + 0.5vh);
+                  h2,
+                  h1,
+                  h3 {
+                        color: gold ;
+                        margin: 20px 0;
+                  }
+                  a {
+                        text-decoration: none;
+                        color: gold ;
+                        font-weight: bold;
+                        font-style: italic;
+                  }
+            }
       }
-    }
-  }
 }

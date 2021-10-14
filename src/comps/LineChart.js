@@ -18,8 +18,8 @@ const LineChart = ({coinHistory, coinName, currentPrice }) => {
                    label: 'Price (USD) ', 
                    data: coinPrice, 
                    fill: false, 
-                   backgroundColor: 'red', 
-                   borderColor: 'blue'
+                   backgroundColor: 'green', 
+                   borderColor: 'gold',
                } 
             ]
    }
@@ -40,9 +40,9 @@ const LineChart = ({coinHistory, coinName, currentPrice }) => {
   return(
     <div class="line-chart">
       <div className="chart-details">
-          <p> {coinName} </p>
-          <p> Current price: USD {currentPrice} </p>
-          <p> Price Change: {coinHistory?.data?.change}%</p>
+          <p> <span>{coinName} Chart</span></p>
+          <p> <span>Current price:</span> USD {currentPrice} </p>
+          <p> <span>Price Change:</span> {coinHistory?.data?.change}%</p>
       </div>
       {coinHistory ? <Line options={options} data={data} /> : <Loader text={'Please refresh page to see chart 📊'} />} 
     </div>

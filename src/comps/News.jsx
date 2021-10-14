@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
 import { useGetCryptosNewsQuery } from '../services/cryptoNewsApi'
-//import { useGetCryptosQuery } from '../services/cryptoApi'
 import '../styles/news.scss'
 import moment from 'moment'
-//import { Select, Col } from 'antd'
 import DemoImg from "../images/demo.jpg"
-
-//const { Option } = Select
+import Loader from './Loader'
 
 const News = ({ simplified }) => {
 
@@ -14,12 +11,18 @@ const News = ({ simplified }) => {
       const { data: cryptoNews, isFetching } = useGetCryptosNewsQuery({
             newsCategory, count: simplified ? 6 : 50
       })
-      if (isFetching) return 'Loading...'
+      if (isFetching) return <Loader text={"Getting your crypto news update 📰"} />
 
 
      
       return (
             <div>
+            {!simplified &&
+                      <div className="news-title">
+                        <h1> Top Cryptocurrency News Update </h1>
+                        <p> This section provides you with up-to-date news and gists on various cryptocurrencies. </p>
+                      </div>
+                  } 
                   {!simplified &&
                         <div>
                               {/*<select
@@ -39,11 +42,6 @@ const News = ({ simplified }) => {
                         </select> */}
                         </div>
                   }
-                  {!simplified &&
-                  <div className="news-heading">
-                    <h1>Top Cryptocurrency News Update </h1>
-                  </div>
-                  } 
                   <div className="news-list">
                         {cryptoNews?.value?.map((news, i) => (
                               <a href={news.url} target="_blank" rel="noreferrer" className="news-item" key={i} >

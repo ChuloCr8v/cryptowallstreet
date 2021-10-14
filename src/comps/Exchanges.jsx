@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { millify } from 'millify'
 import { useGetCryptoExchangesQuery } from '../services/cryptoApi'
 import '../styles/exchanges.scss'
+import Loader from './Loader'
 import HTMLReactParser from 'html-react-parser'
 
 const Exchanges = () => {
@@ -9,7 +10,7 @@ const Exchanges = () => {
     const { data, isFetching } = useGetCryptoExchangesQuery()
     const getExchanges = data?.data?.exchanges
     const [showDesc, setShowDesc] = useState(false)
-    if (isFetching) return 'Loading...'
+    if (isFetching) return <Loader text={'Serving you hot 🔥 exchanges 💱 '} />
 
     const desc = (index) => {
         if (showDesc === index) {

@@ -76,8 +76,11 @@ const CryptoDetails = () => {
      
     return (
         <div className="crypto-details">
-          <h1>{cryptoDetails.name} ({cryptoDetails.slug}) Live Updates</h1>
-          <h4>{cryptoDetails.name} price updates in USD, live statistics, market cap and supply. </h4>
+        <div className="crypto-details-hero">
+               <h1>{cryptoDetails.name} ({cryptoDetails.slug}) Live Updates</h1>
+          <h4>{cryptoDetails.name} price updates in USD, live statistics, market cap and supply. </h4> 
+        </div>
+      
          {/* <select 
             className="select-timeperiod" 
             onChange={(value) => setTimeperiod(value)}>
