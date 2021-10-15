@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import millify from 'millify'
 import '../styles/cryptocurrencies.scss'
 import { SearchOutlined } from '@ant-design/icons'
-import AnimationHome from "./AnimationOne"
 import Loader from './Loader'
 
 const Cryptocurrencies = ({ simplified }) => {
