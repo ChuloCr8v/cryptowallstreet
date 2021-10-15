@@ -20,8 +20,10 @@ const Homepage = () => {
     return (
         <div className="homepage">
         <div className="homepage-hero">
+        <div className="title-container">
             <h1>Welcome To Crypto Wall Street </h1>
             <p> Your No.1 spot for everything crypto. We serve them hot 🔥</p>
+        </div>
         </div>
          <AnimationHome />
             <div className="container">

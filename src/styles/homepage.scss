@@ -2,13 +2,17 @@
       width: 100%;
       overflow: hidden;
       padding-bottom: 100px;
-      padding-top: 100px;
+    //  padding-top: 100px;
       position: relative ;
       .homepage-hero {
+            height: 100vh;
             background-image: url(../images/homepage-heroImg.jpg) ;
             background-size: cover;
-            background-position: center;
-            padding: 100px 50px;
+            background-position: bottom ;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             &::before {
                   content: '';
                   height: 100%;
@@ -19,20 +23,23 @@
                   left: 0;
                   z-index: 0;
             }
-            h1 {
-                  font-size: calc(20px + 0.5vh);
-                  color: gold;
-            }
-            p {
-                  font-size: calc(13px + 0.5vh);
-                  color: white;
-                  margin-top: 10px;
-            }
-            h1,
-            p {
-                  position: relative;
-                  z-index: 20;
-                  text-align: center;
+            .title-container {
+                  //margin-top: -20px;
+                  h1 {
+                        font-size: calc(20px + 0.5vh);
+                        color: gold;
+                  }
+                  p {
+                        font-size: calc(13px + 0.5vh);
+                        color: white;
+                        margin-top: 10px;
+                  }
+                  h1,
+                  p {
+                        position: relative;
+                        z-index: 20;
+                        text-align: center;
+                  }
             }
       }
 

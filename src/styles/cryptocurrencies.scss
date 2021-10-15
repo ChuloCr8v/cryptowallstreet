@@ -1,5 +1,9 @@
 .cryptos-title {
-      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       padding: 100px 20px;
       background-image: url(../images/homepage-heroImg.jpg) ;
       background-size: cover;
@@ -20,8 +24,8 @@
             font-size: calc(20px + 0.5vh);
             text-align: center;
             position: relative;
-            margin: auto ;
-z-index: 20;
+            z-index: 20;
+            margin-top: -100px;
       }
       p {
             font-size: calc(10px + 0.5vh);
