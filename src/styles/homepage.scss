@@ -2,7 +2,7 @@
       width: 100%;
       overflow: hidden;
       padding-bottom: 100px;
-    //  padding-top: 100px;
+      //  padding-top: 100px;
       position: relative ;
       .homepage-hero {
             height: 100vh;
@@ -25,14 +25,20 @@
             }
             .title-container {
                   //margin-top: -20px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 0 20px;
                   h1 {
-                        font-size: calc(20px + 0.5vh);
+                        font-size: calc(20px + 2vh);
                         color: gold;
+
                   }
                   p {
-                        font-size: calc(13px + 0.5vh);
+                        font-size: calc(10px + 1vh);
                         color: white;
-                        margin-top: 10px;
+                        margin-top: 20px;
                   }
                   h1,
                   p {
@@ -54,8 +60,8 @@
             justify-content: center;
             align-items: center;
             .icon-container {
-                  height: 100px;
-                  width: 100px;
+                  height: 150px;
+                  width: 150px;
                   padding: 20px;
                   border: 2px gold solid;
                   border-radius: 100%;
@@ -66,8 +72,8 @@
                   position: relative;
                   &::before, &::after {
                         content: '';
-                        height: 100px;
-                        width: 100px;
+                        height: 150px;
+                        width: 150px;
                         border: 4px gold solid;
                         border-radius: 100%;
                         z-index: 0;
@@ -79,13 +85,13 @@
                   }
                   .icon {
                         color: gold;
-                        font-size: calc(60px + 0.5vh);
+                        font-size: calc(60px + 3vh);
                         position: relative;
                         z-index: 20;
                   }
             }
             .heading {
-                  font-size: calc(15px + 0.5vh);
+                  font-size: calc(15px + 2vh);
                   text-align: center;
                   color: white;
                   margin-bottom: 10px;
@@ -97,7 +103,7 @@
             }
             .subtitle {
                   color: white;
-                  font-size: calc(10px + 0.5vh) ;
+                  font-size: calc(10px + 1.5vh) ;
                   text-align: center;
                   position: relative;
                   margin-bottom: 100px;
@@ -126,10 +132,10 @@
                   h4 {
                         color: gold;
                         margin: 10px 0;
-                        font-size: calc(13px + 0.5vh);
+                        font-size: calc(13px + 1vh);
                   }
                   p {
-                        font-size: calc(20px + 0.5vh);
+                        font-size: calc(20px + 1.5vh);
                         color: white;
                   }
             }

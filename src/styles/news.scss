@@ -1,17 +1,16 @@
 .news-title {
       padding: 20px;
-  //    padding: 100px 20px;
       background-image: url(../images/news-bg.jpg) ;
       background-size: cover;
       background-position: center;
       height: 100vh;
       display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       &::before {
             content: '';
-            height: 100%;
+            height: 100vh;
             width: 100%;
             background: rgb(0, 0, 0, 0.5);
             position: absolute;
@@ -22,13 +21,13 @@
       h1,
       p {
             color: gold;
-            font-size: calc(20px + 0.5vh);
+            font-size: calc(20px + 2vh);
             text-align: center;
             position: relative;
             z-index: 20;
       }
       p {
-            font-size: calc(10px + 0.5vh);
+            font-size: calc(10px + 1vh);
             color: white;
             margin-top: 30px;
       }
@@ -36,16 +35,16 @@
 
 .news-heading {
       h1 {
-            font-size: calc(18px + 0.5vh);
+            font-size: calc(18px + 1vh);
             text-align: center;
-         //   margin: 50px 0 20px 0;
+            //   margin: 50px 0 20px 0;
       }
 }
 .news-list {
       position: relative;
       z-index: 20;
       overflow: hidden;
-  //    margin-top: 50px;
+      //    margin-top: 50px;
       a {
             text-decoration: none;
             color: inherit;
@@ -69,22 +68,22 @@
                         justify-content: space-between;
                         align-items: flex-start;
                         p {
-                              font-size: calc(13px + 0.5vh);
+                              font-size: calc(13px + 1vh);
                               margin-right: 20px;
                               color: gold;
                               font-weight: bold;
                               text-align: justify;
                         }
                         img {
-                              max-width: 200px;
-                              max-height: 100px;
+                              max-width: 250px;
+                              max-height: 150px;
                         }
                   }
 
                   .description {
                         p {
                               color: white;
-                              font-size: calc(10px + 0.5vh);
+                              font-size: calc(10px + 1vh);
                               margin: 20px 0;
                               text-align: justify;
                               span {
@@ -106,11 +105,11 @@
                               justify-content: space-between;
                               align-items: center;
                               p {
-                                    font-size: calc(10px + 0.5vh);
+                                    font-size: calc(10px + 1vh);
                                     color: gold;
                               }
                               img {
-                                    max-width: 20px;
+                                    max-width: 40px;
                                     max-height: auto;
                                     margin-right: 10px;
                               }

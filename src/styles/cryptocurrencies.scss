@@ -21,14 +21,14 @@
       h1,
       p {
             color: gold;
-            font-size: calc(20px + 0.5vh);
+            font-size: calc(20px + 2vh);
             text-align: center;
             position: relative;
             z-index: 20;
             margin-top: -100px;
       }
       p {
-            font-size: calc(10px + 0.5vh);
+            font-size: calc(10px + 1vh);
             color: white;
             margin-top: 30px;
       }
@@ -74,7 +74,7 @@
 .crypto-list {
       list-style: none;
       li {
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.7);
             border: 2px gold solid;
             border-radius: 10px;
             padding: 20px;
