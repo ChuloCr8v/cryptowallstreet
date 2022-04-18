@@ -33,4 +33,4 @@ export const {
   useGetCryptoDetailsQuery,
   useGetCryptoHistoryQuery,
   useGetCryptoExchangesQuery,
-} = cryptoApi;
+} = cryptoApi; 
